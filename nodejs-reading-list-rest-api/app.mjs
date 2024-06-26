@@ -46,6 +46,7 @@ app.put("/reading-list/books/:uuid", (req, res) => {
 
 // get the list of books
 app.get("/reading-list/books", (_, res) => {
+  console.log("Received request to get book list");
   const keys = cache.keys();
   const allData = {};
   for (const key of keys) {
